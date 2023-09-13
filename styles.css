@@ -1,0 +1,250 @@
+:root {
+    --clr-blue: hsl(223, 87%, 63%);
+    --clr-pale-blue: hsl(223, 100%, 88%);
+    --clr-light-red: hsl(354, 100%, 66%);
+    --clr-gray: hsl(0, 0%, 59%);
+    --clr-very-dark-blue: hsl(209, 33%, 12%);
+
+    /* font size: 20px;
+    font weight: 300, 600, 700; */
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo {
+    align-self: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+h3 {
+    align-self: center;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--clr-gray);
+}
+
+h3 span {
+    color: black;
+    font-weight: 600;
+
+}
+
+p {
+    align-self: center;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+form {
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 4.5rem;
+    color: var(--clr-pale-blue);
+}
+
+.email {
+    align-self: center;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0);
+    border: 1px solid var(--clr-pale-blue);
+    padding: 0.625rem 2rem;
+    border-radius: 100vw;
+    font-size: 0.75rem;
+    width: 60vw;
+    height: 2.5rem;
+    color: var(--clr-pale-blue);
+}
+
+.email .error {
+    color: var(--clr-light-red);
+}
+
+.button {
+    width: 60vw;
+    height: 2.5rem;
+    border: 1px solid var(--clr-pale-blue);
+    margin-top: 10px;
+    border-radius: 100vw;
+    border: none;
+    background-color: var(--clr-blue);
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.23);
+}
+
+.form ::placeholder {
+    color: var(--clr-pale-blue);
+    font-size: 0.75rem;
+}
+
+.error-message {
+    color: var(--clr-light-red);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.125px;
+    margin-top: 0;
+    display: none;
+    position: relative;
+    left: 75px;
+}
+
+.subscribed {
+    width: 60%;
+    margin-inline: auto;
+    font-weight: var(--fw-message);
+    color: var(--clr-neutral-400);
+    margin-bottom: 4.5rem;
+    font-size: 1rem;
+    display: none;
+}
+
+.dashboard {
+    width: 80%;
+    align-self: center;
+    max-width: 40rem;
+    margin-bottom: 6.5rem;
+    margin-inline: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1.8125rem;
+    margin-bottom: 1.75rem;
+    /* border-radius: 100vw;
+    border: var(--clr-pale-blue); */
+    /* text-decoration: none;
+    border: 1px solid rgba(76, 123, 243, 0.15); */
+}
+
+.social_icon {
+    text-decoration: none;
+    border: 1px solid rgba(76, 123, 243, 0.15);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social__icon:hover,
+.social__icon:focus {
+    color: var(--clr-blue);
+}
+
+.social__logo {
+    font-size: 1rem;
+    color: var(--clr-blue);
+}
+
+.copyright {
+    font-size: 14px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    color: var(--clr-gray);
+}
+
+@media (min-width: 600px) {
+
+    .logo {
+        margin-bottom: 2.5rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5px;
+    }
+
+    .email {
+        max-width: 40rem;
+        width: 35vw;
+        margin-bottom: 5.875rem;
+        position: relative;
+        left: 20;
+    }
+
+    .email,
+    .button {
+        height: 3.5rem;
+    }
+
+    .email {
+        font-size: 1rem;
+    }
+
+    .email ::placeholder {
+        font-size: 1rem;
+    }
+
+    .error-message {
+        position: absolute;
+        font-size: 0.75rem;
+        letter-spacing: 0.15px;
+        text-align: left;
+        margin-left: 2rem;
+        bottom: -1.725rem;
+        display: none;
+        position: relative;
+        top: -95px;
+        left: -5px;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding-inline: 1.99rem;
+        width: 100%;
+        position: relative;
+        top: -12px;
+        left: 10px;
+    }
+
+    .subscribed {
+        margin-bottom: 5.875rem;
+        font-size: 1.5rem;
+        display: none;
+        position: relative;
+        left: 190px;
+    }
+
+    .dashboard {
+        margin-top: 0;
+    }
+}
